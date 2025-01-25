@@ -1,7 +1,7 @@
-package dev.lordvi.terramirror.init;
+package net.lordvi.terramirror.init;
 
-import dev.lordvi.terramirror.TerraMirror;
-import dev.lordvi.terramirror.items.ModItems;
+import net.lordvi.terramirror.TerraMirror;
+import net.lordvi.terramirror.items.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

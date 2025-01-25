@@ -1,10 +1,10 @@
-package dev.lordvi.terramirror;
+package net.lordvi.terramirror;
 
-import dev.lordvi.terramirror.effects.ModEffects;
-import dev.lordvi.terramirror.init.CreativeTabInit;
-import dev.lordvi.terramirror.items.ModItems;
-import dev.lordvi.terramirror.sounds.ModSounds;
-import dev.lordvi.terramirror.utils.PlayerDeathEvents;
+import net.lordvi.terramirror.effects.ModEffects;
+import net.lordvi.terramirror.init.CreativeTabInit;
+import net.lordvi.terramirror.items.ModItems;
+import net.lordvi.terramirror.sounds.ModSounds;
+import net.lordvi.terramirror.utils.PlayerDeathEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -12,7 +12,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(TerraMirror.MODID)
 public class TerraMirror {
-    public static final String MODID = "terra_mirror";
+    public static final String MODID = "terramirror";
+
+    public TerraMirror() {
+        // deprecado en 1.21+, lo dejo por si arranca para 1.20.1
+        this(FMLJavaModLoadingContext.get());
+    }
 
     public TerraMirror(FMLJavaModLoadingContext context) {
         IEventBus bus = context.getModEventBus();

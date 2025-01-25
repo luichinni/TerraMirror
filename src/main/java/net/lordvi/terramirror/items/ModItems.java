@@ -1,7 +1,7 @@
-package dev.lordvi.terramirror.items;
+package net.lordvi.terramirror.items;
 
-import dev.lordvi.terramirror.TerraMirror;
-import dev.lordvi.terramirror.init.CreativeTabInit;
+import net.lordvi.terramirror.TerraMirror;
+import net.lordvi.terramirror.init.CreativeTabInit;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;

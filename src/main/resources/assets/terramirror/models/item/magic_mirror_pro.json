@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "terra_mirror:item/magic_mirror_pro"
+    "layer0": "terramirror:item/magic_mirror_pro"
   }
 }

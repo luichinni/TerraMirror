@@ -1,4 +1,4 @@
-package dev.lordvi.terramirror.items;
+package net.lordvi.terramirror.items;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

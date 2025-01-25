@@ -1,4 +1,4 @@
-package dev.lordvi.terramirror.utils;
+package net.lordvi.terramirror.utils;
 
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

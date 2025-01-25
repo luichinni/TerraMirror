@@ -1,6 +1,6 @@
-package dev.lordvi.terramirror.sounds;
+package net.lordvi.terramirror.sounds;
 
-import dev.lordvi.terramirror.TerraMirror;
+import net.lordvi.terramirror.TerraMirror;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;

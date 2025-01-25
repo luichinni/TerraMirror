@@ -1,8 +1,8 @@
-package dev.lordvi.terramirror.items;
+package net.lordvi.terramirror.items;
 
-import dev.lordvi.terramirror.effects.ModEffects;
-import dev.lordvi.terramirror.sounds.ModSounds;
-import dev.lordvi.terramirror.utils.LevelStorage;
+import net.lordvi.terramirror.effects.ModEffects;
+import net.lordvi.terramirror.sounds.ModSounds;
+import net.lordvi.terramirror.utils.LevelStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;

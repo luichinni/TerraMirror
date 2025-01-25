@@ -1,6 +1,6 @@
-package dev.lordvi.terramirror.effects;
+package net.lordvi.terramirror.effects;
 
-import dev.lordvi.terramirror.TerraMirror;
+import net.lordvi.terramirror.TerraMirror;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
