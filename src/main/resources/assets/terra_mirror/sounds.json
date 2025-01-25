@@ -1,0 +1,8 @@
+{
+  "mirror_teleport_sound": {
+    "subtitles": "sounds.terra_mirror.mirror_teleport_sound",
+    "sounds": [
+      "terra_mirror:mirror_teleport_sound"
+    ]
+  }
+}

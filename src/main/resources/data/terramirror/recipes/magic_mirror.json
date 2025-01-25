@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "magic_mirror_mod",
+  "category": "equipment",
+  "pattern": [
+    " I ",
+    "IGI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": [
+      {
+        "item": "minecraft:glass"
+      },
+      {
+        "item": "minecraft:cyan_stained_glass"
+      },
+      {
+        "item": "minecraft:blue_stained_glass"
+      },
+      {
+        "item": "minecraft:white_stained_glass"
+      },
+      {
+        "item": "minecraft:light_blue_stained_glass"
+      }
+    ]
+  },
+  "result": {
+    "item": "terra_mirror:magic_mirror",
+    "count": 1
+  },
+  "show_notification": true
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "magic_mirror_mod",
+  "category": "equipment",
+  "pattern": [
+    " D ",
+    "AMZ",
+    " E "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "Z": {
+      "item": "minecraft:golden_carrot"
+    },
+    "M": {
+      "item": "terra_mirror:magic_mirror"
+    }
+  },
+  "result": {
+    "item": "terra_mirror:magic_mirror_pro",
+    "count": 1
+  },
+  "show_notification": true
+}
