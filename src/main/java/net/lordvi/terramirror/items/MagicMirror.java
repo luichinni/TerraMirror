@@ -3,8 +3,11 @@ package net.lordvi.terramirror.items;
 import net.lordvi.terramirror.effects.ModEffects;
 import net.lordvi.terramirror.sounds.ModSounds;
 import net.lordvi.terramirror.utils.LevelStorage;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -32,18 +35,24 @@ public class MagicMirror extends Item {
     }
 
     protected void GoToBed(Player player, Level level) {
+        if (player.isLocalPlayer()) {
+            player.playSound(ModSounds.MIRROR_TELEPORT_SOUND.get());
+            return;
+        }
+
         BlockPos pos = LevelStorage.getSavedPosition(player);
 
         if (pos != null) {
             player.teleportTo((ServerLevel) Objects.requireNonNull(LevelStorage.getSavedLevel(player)), pos.getX(), pos.getY(), pos.getZ(), new HashSet<RelativeMovement>(), 0, 0);
             player.setInvulnerable(true);
 
+            String message = "§eBienvenido a casa!";
+            player.sendSystemMessage(Component.literal(message));
+
             // para quitar la invulnerabilidad luego de 2 segs
             scheduler.schedule(() -> {
                 player.setInvulnerable(false);
             }, 2, TimeUnit.SECONDS);
-
-            player.playSound(ModSounds.MIRROR_TELEPORT_SOUND.get());
 
             if (!player.hasEffect(ModEffects.HOME_SWEET_HOME_EFFECT.get())){
                 player.addEffect(new MobEffectInstance(ModEffects.HOME_SWEET_HOME_EFFECT.get(),20 * 15));
@@ -64,12 +73,16 @@ public class MagicMirror extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
+        if(context.getLevel().isClientSide) return InteractionResult.CONSUME;
+
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         BlockState bloque = level.getBlockState(pos);
 
         if (bloque.getBlock().getDescriptionId().contains("_bed") && level.dimensionType().bedWorks()) {
             LevelStorage.saveLevelData(Objects.requireNonNull(context.getPlayer()), context.getClickedPos());
+            String message = "§bPunto de retorno establecido!";
+            context.getPlayer().sendSystemMessage(Component.literal(message));
         }else{
             this.GoToBed(context.getPlayer(), level);
         }
